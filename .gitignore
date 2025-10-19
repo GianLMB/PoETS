@@ -167,9 +167,7 @@ cython_debug/
 data/
 slurm/
 debug/
-test/
 logs/
-scripts/
 wandb/
 
 .vscode/
