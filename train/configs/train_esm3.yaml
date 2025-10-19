@@ -1,0 +1,29 @@
+# @package _global_
+
+# === 1. Set config parameters ===
+name: "" # default name for the experiment, "" means logger (eg. wandb) will generate a unique name
+seed: 42 # seed for random number generators in pytorch, numpy and python.random
+verbosity: 1
+poet_ckpt_path: ${env.paths.root_dir}/data/poet.ckpt
+task_name: "train"
+test: False
+
+# === 2. Specify defaults here. Defaults will be overwritten by equivalently named options in this file ===
+defaults:
+  - env: default
+  - hydra: default
+  - dataset: funfam_split_esm3
+  - model: esm3_encoder
+  - training_args: default
+  - callbacks: default
+  - _self_ # this is a special key that allows you to overwrite the defaults
+  # debugging config (enable through command line, e.g. `python train.py debug=default)
+  - debug: null
+  # launcher: override from command line, e.g. `python train.py launcher=slurm_ddp`
+  - override hydra/launcher: slurm
+
+training_args:
+  disable_tqdm: true
+  per_device_train_batch_size: 1
+  per_device_eval_batch_size: 1
+  gradient_accumulation_steps: 128

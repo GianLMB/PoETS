@@ -1,0 +1,14 @@
+# Model hparams
+
+_target_: poet.models.poet_struct.PoETS
+n_vocab: 24
+hidden_dim: 1024
+num_layers: 12
+nhead: 16
+use_multi_rotary: true
+norm: true
+encoder_dim: 512
+dropout: 0.1
+projector: "mlp"
+add_gaussian_noise: True
+alpha_init: 0.001

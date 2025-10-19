@@ -1,0 +1,8 @@
+funfam_ids_path: ${env.paths.data}/processed/funfam_ids.txt
+msa_dir: ${env.paths.data}/msa_fasta
+encoded_pdb_dir: ${env.paths.data}/processed/esmif1_encodings_full
+alphabet: null
+seed: 42
+train_frac: 0.8
+val_frac: 0.1
+test_frac: 0.1

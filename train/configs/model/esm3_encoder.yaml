@@ -1,0 +1,4 @@
+defaults:
+  - default
+
+encoder_dim: 1024

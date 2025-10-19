@@ -1,0 +1,6 @@
+# Model hparams
+
+defaults:
+  - default
+
+projector: "geom_att"

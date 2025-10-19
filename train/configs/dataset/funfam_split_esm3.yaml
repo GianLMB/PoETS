@@ -1,0 +1,6 @@
+# Use esm3 vae encodings instead of esmif1 encodings
+
+defaults:
+  - funfam_split
+
+encoded_pdb_dir: ${env.paths.data}/processed/esm3_vae_encodings

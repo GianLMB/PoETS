@@ -1,0 +1,6 @@
+# Model hparams
+
+defaults:
+  - default
+
+_target_: poet.models.poet_struct2.PoETS

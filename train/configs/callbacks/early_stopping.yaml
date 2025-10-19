@@ -1,0 +1,6 @@
+# Monitor a metric and stop training when it stops improving.
+
+early_stopping:
+  _target_: transformers.EarlyStoppingCallback
+  early_stopping_threshold: 0. # minimum change in the monitored quantity to qualify as an improvement
+  early_stopping_patience: 20 # number of checks with no improvement after which training will be stopped

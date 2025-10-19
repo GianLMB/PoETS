@@ -93,7 +93,7 @@ class PackedTensorSequences:
         to_paddedable: bool = True,
     ):
         """
-        If to_paddedable, indicies and batch_size must be set to values that allow this
+        If to_paddedable, indices and batch_size must be set to values that allow this
         object to be correctly padded.
         """
         if to_paddedable:

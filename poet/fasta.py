@@ -19,6 +19,9 @@ def parse_stream(f, comment=b"#", upper=True):
             name = line[1:]
             sequence = []
         else:
+            line = line.replace(
+                b".", b"-"
+            )  # handle dot gap representation for a2m file format
             if upper:
                 sequence.append(line.upper())
             else:
